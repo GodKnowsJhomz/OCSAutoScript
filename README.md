@@ -14,3 +14,4 @@ wget https://raw.githubusercontent.com/GodKnowsJhomz/OCSAutoScript/master/OCSAut
 
 ### Updated by GodKnows Jhomz on February 2, 2019
 - Translated Whole Panel to English
+- Updating Webmin from 1.801 to 1.900
