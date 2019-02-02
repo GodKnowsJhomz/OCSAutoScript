@@ -240,11 +240,11 @@ service stunnel4 restart
 
 # install webmin
 cd
-wget "http://script.hostingtermurah.net/repo/webmin_1.801_all.deb"
-dpkg --install webmin_1.801_all.deb;
+wget "https://raw.githubusercontent.com/GodKnowsJhomz/OCSAutoScript/master/webmin_1.900_all.deb"
+dpkg --install webmin_1.900_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
-rm /root/webmin_1.801_all.deb
+rm /root/webmin_1.900_all.deb
 service webmin restart
 service vnstat restart
 
@@ -299,13 +299,13 @@ cp -r /usr/share/easy-rsa/ /etc/openvpn
 mkdir /etc/openvpn/easy-rsa/keys
 # replace bits
 sed -i 's|export KEY_COUNTRY="US"|export KEY_COUNTRY="PH"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_PROVINCE="CA"|export KEY_PROVINCE="Albay"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Legazpi"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_PROVINCE="CA"|export KEY_PROVINCE="Manila"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Manila"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="IIEE"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="rdbtx123@gmail.com"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="daybreakersx"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="daybreakersx"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU=changeme|export KEY_OU=daybreakersx|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="godknowsjhomz@gmail.com"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="GodKnows Team"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="GodKnows Jhomz"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_OU=changeme|export KEY_OU=GodKnows Jhomz|' /etc/openvpn/easy-rsa/vars
 #Create Diffie-Helman Pem
 openssl dhparam -out /etc/openvpn/dh2048.pem 2048
 # Create PKI
